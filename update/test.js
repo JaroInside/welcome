@@ -39,12 +39,12 @@ describe("update", () => {
       expect(update([1], { $unshift: [7] })).toEqual([7, 1]);
     });
 
-    // it("should support merge", () => {
-    //   expect(update({ a: "b" }, { $merge: { c: "d" } })).toEqual({
-    //     a: "b",
-    //     c: "d"
-    //   });
-    // });
+    it("should support merge", () => {
+      expect(update({ a: "b" }, { $merge: { c: "d" } })).toEqual({
+        a: "b",
+        c: "d"
+      });
+    });
 
     // it("should support apply", () => {
     //   expect(
