@@ -2,7 +2,9 @@
 
 function update(state, behavior) {
   let nextState = Object.assign({}, state);
-  nextState.name = behavior.name['$set'];
+  for (let b in behavior) {
+    if (b !== '$set') nextState[b] = update(state[b], behavior[b]);
+  }
   return nextState;
 }
 
