@@ -65,8 +65,8 @@ describe("update", () => {
       });
     });
 
-    // it("should support splice", () => {
-    //   expect(update([1, 4, 3], { $splice: [[1, 1, 2]] })).toEqual([1, 2, 3]);
-    // });
+    it("should support splice", () => {
+      expect(update([1, 4, 3], { $splice: [[1, 1, 2]] })).toEqual([1, 2, 3]);
+    });
   });
 });
